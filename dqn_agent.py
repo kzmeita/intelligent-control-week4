@@ -57,7 +57,7 @@ if __name__ == '__main__':
     state_size = env.observation_space.shape[0]
     action_size = env.action_space.n
     agent = DQNAgent(state_size, action_size)
-    episodes = 200
+    episodes = 1000
     batch_size = 32
 
     agent.model.save("dqn_cartpole.h5")
@@ -85,3 +85,4 @@ if __name__ == '__main__':
         if len(agent.memory) > batch_size:
             agent.replay(batch_size)
 
+ 
